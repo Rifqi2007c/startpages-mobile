@@ -1,4 +1,4 @@
-    const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+    const apiKey = '8db88de7cd9d7bbaa6c96c0b0f5073d0'; // Replace with your actual API key
     const cityInput = document.getElementById('city-input');
     const searchButton = document.getElementById('search-button');
     const weatherDisplay = document.getElementById('weather-display');
@@ -31,3 +31,4 @@
             weatherDisplay.innerHTML = `<p>Error fetching weather data. Please try again.</p>`;
         }
     }
+
