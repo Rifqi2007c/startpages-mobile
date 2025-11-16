@@ -1,34 +1,26 @@
-    const apiKey = '8db88de7cd9d7bbaa6c96c0b0f5073d0'; // Replace with your actual API key
-    const cityInput = document.getElementById('city-input');
-    const searchButton = document.getElementById('search-button');
-    const weatherDisplay = document.getElementById('weather-display');
+const apiKey = 'YOUR_API_KEY';
+const city = 'London';
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-    searchButton.addEventListener('click', () => {
-        const city = cityInput.value;
-        if (city) {
-            fetchWeatherData(city);
-        }
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data); // Log the data to see its structure
+        // Call a function to display the data
+        displayWeather(data);
+    })
+    .catch(error => {
+        console.error('Error fetching weather:', error);
+        document.getElementById('weather-info').innerHTML = '<p>Could not retrieve weather data.</p>';
     });
 
-    async function fetchWeatherData(city) {
-        try {
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-            const data = await response.json();
-
-            if (data.cod === 200) {
-                weatherDisplay.innerHTML = `
-                    <h2>${data.name}, ${data.sys.country}</h2>
-                    <p>Temperature: ${data.main.temp}°C</p>
-                    <p>Condition: ${data.weather[0].description}</p>
-                    <p>Humidity: ${data.main.humidity}%</p>
-                    <p>Wind Speed: ${data.wind.speed} m/s</p>
-                `;
-            } else {
-                weatherDisplay.innerHTML = `<p>Error: ${data.message}</p>`;
-            }
-        } catch (error) {
-            console.error('Error fetching weather data:', error);
-            weatherDisplay.innerHTML = `<p>Error fetching weather data. Please try again.</p>`;
-        }
+function displayWeather(data) {
+    const weatherInfoDiv = document.getElementById('weather-info');
+    if (data && data.main && data.weather && data.weather[0]) {
+        const temperature = data.main.temp;
+        const description = data.weather[0].description;
+        weatherInfoDiv.innerHTML = `<p>Temperature: ${temperature}°C</p><p>Description: ${description}</p>`;
+    } else {
+        weatherInfoDiv.innerHTML = '<p>Could not retrieve weather data.</p>';
     }
-
+}
