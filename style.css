@@ -4,7 +4,9 @@
 }
 
 @media (min-width: 412px) {
- font-size: 34px;
+ body {
+  font-size: 34px;
+ }
 }
    
 body {
@@ -28,6 +30,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 
 
