@@ -1,11 +1,12 @@
 @font-face {
  font-family: Proto;
- src: url(0xProtoNerdFont.woff2);
+ src: url('0xProtoNerdFont.woff2');
 }
    
 body {
   color: white;
   font-family: Proto;
-  background-image: url(lain.webp)
+  background-image: url('lain.webp')
 
 }
+
