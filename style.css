@@ -2,8 +2,12 @@
  font-family: Proto;
  src: url('0xProtoNerdFont.woff2');
 }
+
+@media {
+ font-size:
+}
    
-body {
+body ((min-width: 412px)){
   color: white;
   font-family: Proto;
 }
@@ -24,6 +28,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 
 
