@@ -1,5 +1,5 @@
 const apiKey = 'a6b2cda39ea0ea663bb15a310ef66466';
-const city = 'London';
+const city = 'Kluang,MY';
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 fetch(url)
@@ -24,5 +24,6 @@ function displayWeather(data) {
         weatherInfoDiv.innerHTML = '<p>Could not retrieve weather data.</p>';
     }
 }
+
 
 
