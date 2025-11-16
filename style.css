@@ -6,7 +6,8 @@
 body {
   color: white;
   font-family: Proto;
-  background-image: url('lain.webp')
-
 }
 
+.background {
+  background-image: url ('lain.webp')
+}
