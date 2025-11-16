@@ -9,7 +9,7 @@ body {
 }
 
 .background {
-  background-image: url('lain.webp');
+  background-image: url('flowers-1.webp');
   background-size: cover; /* Cover the entire element */
   background-position: center center; /* Center the image */
   background-repeat: no-repeat; /* Prevent image repetition */
@@ -24,5 +24,6 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 
 
