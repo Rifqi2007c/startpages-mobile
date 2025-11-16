@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_API_KEY';
+const apiKey = '8db88de7cd9d7bbaa6c96c0b0f5073d0';
 const city = 'London';
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -24,3 +24,4 @@ function displayWeather(data) {
         weatherInfoDiv.innerHTML = '<p>Could not retrieve weather data.</p>';
     }
 }
+
