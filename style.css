@@ -33,9 +33,11 @@ body {
 
 .weather-container {
   background-color: #24273a;
+  padding: 10px;
   border: 4px solid #8CAAEE;
   border-radius: 9px;
 }
+
 
 
 
