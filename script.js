@@ -25,5 +25,13 @@ function displayWeather(data) {
     }
 }
 
+import { TodoistApi } from "@doist/todoist-api-typescript"
+
+const api = new TodoistApi("c39b6fc95252db0379fb01af908b265ec67105b2")
+
+api.getProjects()
+    .then((projects) => console.log(projects))
+    .catch((error) => console.log(error))
+
 
 
